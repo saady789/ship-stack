@@ -12,16 +12,13 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import axios from "axios";
-
-const BACKEND_UPLOAD_URL = "http://localhost:3000";
+// import { useState } from "react";
 
 export function Landing() {
-  const [repoUrl, setRepoUrl] = useState("");
-  const [uploadId, setUploadId] = useState("");
-  const [uploading, setUploading] = useState(false);
-  const [deployed, setDeployed] = useState(false);
+  // const [repoUrl, setRepoUrl] = useState("");
+  // const [uploadId, setUploadId] = useState("");
+  // const [uploading, setUploading] = useState(false);
+  // const [deployed, setDeployed] = useState(false);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
@@ -39,8 +36,8 @@ export function Landing() {
             <div className="space-y-2">
               <Label htmlFor="github-url">GitHub Repository URL</Label>
               <Input
-                onChange={(e) => {
-                  setRepoUrl(e.target.value);
+                onChange={() => {
+                  // setRepoUrl(e.target.value);
                 }}
                 placeholder="https://github.com/username/repo"
               />
@@ -52,7 +49,7 @@ export function Landing() {
                 );
                 return; // prevent deployment logic from running
               }}
-              disabled={uploadId !== "" || uploading}
+              // disabled={uploadId !== "" || uploading}
               className="w-full"
               type="submit"
             >
@@ -61,7 +58,7 @@ export function Landing() {
           </div>
         </CardContent>
       </Card>
-      {deployed && (
+      {/* {deployed && (
         <Card className="w-full max-w-md mt-8">
           <CardHeader>
             <CardTitle className="text-xl">Deployment Status</CardTitle>
@@ -87,7 +84,7 @@ export function Landing() {
                 );
                 return; // prevent deployment logic from running
               }}
-              disabled={uploadId !== "" || uploading}
+              // disabled={uploadId !== "" || uploading}
               className="w-full"
               type="submit"
             >
@@ -95,7 +92,7 @@ export function Landing() {
             </Button>
           </CardContent>
         </Card>
-      )}
+      )} */}
     </main>
   );
 }

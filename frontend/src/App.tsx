@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import './App.css'
-import { Landing } from './components/landing'
+// import { useState } from 'react'
+import "./App.css";
+import { Landing } from "./components/landing";
 
 function App() {
-  return (
-      <Landing />
-  )
+  return <Landing />;
 }
 
-export default App
+export default App;
